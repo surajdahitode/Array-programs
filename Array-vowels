@@ -1,0 +1,42 @@
+//Create an array which is take user input and check which elements in array vowels if it is vowels or not and what is count how many vowels .
+
+
+package pakage_Array_Programs;
+
+import java .util.Scanner;
+
+class Array_vowels{
+	
+	
+		public static void main(String[] args) 
+	  {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter a The Size Of Storing the Elements");
+			char char_arr []= new char[sc.nextInt()];
+			
+			
+			System.out.println("Enter a The Elements In Character Arrray");
+			
+			
+			//******************Taking the elements in char array from user**********
+			  for(int i=0;i<=char_arr.length-1;i++)
+			  {
+				char_arr[i]=sc.next().charAt(0);
+			  }
+			//****************Printing the char elements****************
+			  int count=0;
+			for (int i=0;i<=char_arr.length-1;i++)
+			{
+				// Check For Vowels
+				if(char_arr[i]=='a'||char_arr[i]=='e'||char_arr[i]=='i'||char_arr[i]=='o'||char_arr[i]=='u'||char_arr[i]=='A'||char_arr[i]=='E'||char_arr[i]=='I'||char_arr[i]=='O'||char_arr[i]=='U')
+				{
+					count++;	
+				}
+			}
+			System.out.println("Total Vowels Are:-" +count);
+		}
+
+	
+	
+}
+
