@@ -1,0 +1,51 @@
+/*Write a program to create a String array and store given data 1. "000100010100101001" 2."1110001001100111001101" 3. "111000101010" 4. "000101001100"
+if the first three character of given String is 1.000 ->DNA 2. 111-> RNA*/
+
+import java.util.Scanner;
+class RnaDna
+{
+//datatype []variablename=new datatype[size];
+  String arr[]= new String[4]; 
+    public static void main(String[] args)
+    {   
+           //Create an object of StringElement  
+              RnaDna ref= new RnaDna();
+          //Create an Scanner Object
+            Scanner sc= new Scanner(System.in);
+          System.out.println(" enter the  string for array");
+           //Taking an user input of StringElement
+              for (int i =0;i<ref.arr.length;i++)
+              {
+                  ref.arr[i]=sc.next();
+        
+              }  
+                ref.dna_Rna( );
+     }
+     //Creating a non static method for check first three character of given String 
+         public void dna_Rna( )
+         {
+          for(int i=0;i<arr.length;i++) //Outer for
+          {
+              String con="";
+              for(int j=0;j<3;j++) //inner for       
+              {
+                  if(arr[i].charAt(j)=='0'||arr[i].charAt(j)=='1')
+                 {
+                  con=con+arr[i].charAt(j);
+                 }
+              }//inner for
+                 if(con.equals("000"))
+                  {
+                      System.out.println("DNA");
+                  }
+                  else if(con.equals("111"))
+                  {
+                       System.out.println("RNA");
+                  }
+                  else
+                  {
+                       System.out.println("Not Valid Information");
+                  } 
+          }//outer for
+         }
+}
