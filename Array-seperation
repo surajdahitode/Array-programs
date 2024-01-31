@@ -1,0 +1,38 @@
+package pakage_Array_Programs;
+
+public class Array_Seperation {
+
+	int arr1[]=new int[8];
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int  arr[]= {1113,1317,1719,2329};
+		
+		
+		Array_Separate ref= new Array_Separate();
+		//System.out.println(ref.arr1);
+		ref.newarray(arr);
+		for (int a:ref.arr1)
+		{
+			System.out.print(" "+ a);
+		}
+		
+	}
+	public int[] newarray(int[]a)
+	{
+		int j=0;
+     for (int i=0;i<a.length;i++,j++) {
+		int v1=a[i]/100;
+		int v2=a[i]%100;
+		arr1[j]=v1;
+	   //  System.out.println(arr1[j]);
+	     j++;
+		arr1[j]=v2;
+	//	System.out.println(arr1[j]);
+	    }
+	   return arr1;
+	}
+
+	
+
+}
