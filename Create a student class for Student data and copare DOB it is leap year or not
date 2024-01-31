@@ -1,0 +1,87 @@
+public class Studentsclass {
+	
+
+		
+		String name;
+		int marks;
+		String batchcode;
+		
+		Studentsclass(String name,int marks,String batchcode)
+		{
+			this.name=name;
+			this.marks=marks;
+			this.batchcode=batchcode;
+		}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Studentsclass[] arr=new Studentsclass[3];
+			Studentsclass S1 =new Studentsclass("suraj2002",84,"M2");
+			Studentsclass S2 =new Studentsclass("raj1999",84,"M2");
+			Studentsclass S3 =new Studentsclass("prathmesh2000",84,"M2");
+			
+			arr[0]=S1;
+			arr[1]=S2;
+			arr[2]=S3;
+			LeapInfo(arr);
+			
+		
+			
+		}
+		public static void LeapInfo(Studentsclass[]arr) {
+			
+	         // String a= arr.toString();
+	         // StringBuffer A1= new StringBuffer(a);
+	        //  A1.substring(6,9);
+	          
+	        //  System.out.println(arr[0].name);
+	          
+	          int c=arr[0].name.length();
+	          int d=arr[1].name.length();
+	          int e=arr[2].name.length();
+	          
+	          String Z= new String (arr[0].name.substring(c-4));
+	          String Z1= new String (arr[1].name.substring(d-4));
+	          String Z2= new String (arr[2].name.substring(e-4));
+			
+//			System.out.println(Z);
+//			System.out.println(Z1);
+//			System.out.println(Z2);
+	          
+	          Integer i1=new Integer(Z);
+	          Integer i2=new Integer(Z1);
+	          Integer i3=new Integer(Z2);
+	          
+//	        System.out.println(i1);
+//	  		System.out.println(i2);
+//	  		System.out.println(i3);
+//	  		
+	  		if (i1%4==0 &&  i1%100 !=0 ||i1%400==0) {
+	  			
+	  			System.out.println(i1+ "it is leap year");
+	  		}
+	  		else {
+	  			System.out.println(i1+"it is not a leap year");
+	  		}
+if (i2%4==0 &&  i2%100 !=0 ||i2%400==0) {
+	  			
+	  			System.out.println(i2+ "it is leap year");
+	  		}
+	  		else {
+	  			System.out.println(i2+"it is not a leap year");
+	  		}
+if (i3%4==0 &&  i3%100 !=0 ||i3%400==0) {
+		
+		System.out.println(i3+ "it is leap year");
+	}
+	else {
+		System.out.println(i3+"it is not a leap year");
+	}
+	            
+	          
+	          
+	          
+		}
+
+	}
+
+
