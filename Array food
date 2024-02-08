@@ -1,0 +1,62 @@
+package Array;
+import java.util.Scanner;
+
+public class Food {
+	
+	
+	
+	    String name;
+	    double price;
+	    int quantity;
+	    String feedback;
+
+	    Food(String name, double price, int quantity, String feedback) {
+	        this.name = name;
+	        this.price = price;
+	        this.quantity = quantity;
+	        this.feedback = feedback;
+	    }
+	
+
+	
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Create an array of Food objects
+	        Food[] foods = new Food[3]; // Adjust the size as needed
+
+	        // Populate the array with food details
+	        for (int i = 0; i < foods.length; i++) {
+	            System.out.println("Enter details for food item " + (i + 1) + ":");
+	            System.out.print("Name: ");
+	            String name = scanner.nextLine();
+	            System.out.print("Price: ");
+	            double price = scanner.nextDouble();
+	            scanner.nextLine(); // Consume newline character
+	            System.out.print("Quantity: ");
+	            int quantity = scanner.nextInt();
+	            scanner.nextLine(); // Consume newline character
+	            System.out.print("Feedback: ");
+	            String feedback = scanner.nextLine();
+
+	            foods[i] = new Food(name, price, quantity, feedback);
+	        }
+	        
+
+	        // Find the most expensive food item
+	        Food mostExpensiveFood = foods[0];
+	        for (int i = 1; i < foods.length; i++) {
+	            if (foods[i].price > mostExpensiveFood.price) {
+	                mostExpensiveFood = foods[i];
+	            }
+	        }
+
+	        // Print details of the most expensive food item
+	        System.out.println("\nThe most expensive food is:");
+	        System.out.println("Name: " + mostExpensiveFood.name);
+	        System.out.println("Price: " + mostExpensiveFood.price);
+	        System.out.println("Quantity: " + mostExpensiveFood.quantity);
+	        System.out.println("Feedback: " + mostExpensiveFood.feedback);
+	    }
+	}
+
